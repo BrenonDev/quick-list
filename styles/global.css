@@ -23,6 +23,11 @@
     --label: 600 1rem/1.25rem var(--font-family-inter);
     --paragraph: 500 1rem/1.25rem var(--font-family-inter);
     --link: 500 .875rem/1rem var(--font-family-inter);
+    --input: 400 1rem/1.4 var(--font-family-inter);
+}
+
+body {
+    background-color: var(--background-primary);
 }
 
 a {
@@ -32,4 +37,8 @@ a {
 
 ul {
     list-style: none;
+}
+
+.hidden {
+    display: none !important;
 }
