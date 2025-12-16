@@ -5,9 +5,16 @@ const list = document.querySelector('.list');
 
 // captura o texto digitado no input
 itemName.addEventListener('input', () => {
-    console.log(itemName.value);
 
+    // captura o clique no botão de adicionar item
     addButton.onclick = () => {
+        
+        // verifica se o input está vazio
+        if (itemName.value.trim() === "") {
+            alert("Por favor, digite um item para adicionar à lista.");
+            return;
+        };
+
         // cria o elemento de item da lista
         const item = document.createElement('li');
         item.classList.add('item');
@@ -25,7 +32,7 @@ itemName.addEventListener('input', () => {
         // cria o texto do item e atribui o valor do input
         const text = document.createElement('span');
         text.classList.add('text');
-        text.textContent = itemName.value;
+        text.textContent = itemName.value.trim();
 
         // cria o botão de deletar o item
         const deleteButton = document.createElement('button');
@@ -48,6 +55,7 @@ itemName.addEventListener('input', () => {
         // insere o item na lista
         list.appendChild(item);
 
+        // limpa o input após adicionar o item
         itemName.value = "";
     };
 });
