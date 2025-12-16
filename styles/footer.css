@@ -1,0 +1,25 @@
+footer {
+    #signature {
+        margin-block: 3rem 2.5rem;
+        text-align: center;
+
+        & a {
+            & span {
+                font: .875rem "Roboto Mono", monospace;
+                background-color: var(--border-primary);
+                color: var(--content-primary);
+                display: inline-block;
+                padding: .1875rem .4375rem .3125rem;
+                border-radius: .3125rem;
+                transition: background-color 150ms ease, filter 150ms ease;
+            }
+
+            &:hover {
+                & span {
+                    background-color: var(--border-hover);
+                    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+                }
+            }
+        }
+    }
+}
