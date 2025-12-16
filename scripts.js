@@ -47,5 +47,7 @@ itemName.addEventListener('input', () => {
 
         // insere o item na lista
         list.appendChild(item);
+
+        itemName.value = "";
     };
 });
