@@ -21,7 +21,6 @@ main {
     & .add-item {
         display: flex;
         gap: 1rem;
-        /* margin-block: 1rem 2.5rem; */
 
         & input {
             width: 100%;

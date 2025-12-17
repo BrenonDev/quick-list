@@ -75,5 +75,15 @@ addEventListener('click', (event) => {
 
         // exibir a mensagem de item excluído
         alert.classList.remove('hide');
+        setTimeout(() => {
+            alert.classList.add('hide');
+        }, 3000);
     }
+
+    // verifica se o alvo do clique é o botão de fechar da mensagem de alerta
+    if (event.target.classList.contains('remove') || event.target.closest('.remove')) {
+
+        // oculta a mensagem de alerta
+        alert.classList.add('hide');
+    };
 });
