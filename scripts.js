@@ -2,6 +2,8 @@
 const itemName = document.querySelector('.add-item input');
 const addButton = document.querySelector('.add-button');
 const list = document.querySelector('.list');
+const item = document.querySelectorAll('.item');
+const deleteButton = document.querySelectorAll('.delete');
 
 // captura o texto digitado no input
 itemName.addEventListener('input', () => {
@@ -58,4 +60,16 @@ itemName.addEventListener('input', () => {
         // limpa o input após adicionar o item
         itemName.value = "";
     };
+});
+
+// exclui o item da lista ao clicar no botão de deletar
+addEventListener('click', (event) => {
+
+    // verifica se o alvo do clique é o botão de deletar ou ícone de lixeira
+    if (event.target.classList.contains('delete') || event.target.closest('.delete')) {
+
+    // obtém o item pai do botão de deletar clicado
+    const itemToDelete = event.target.closest('.item');
+    list.removeChild(itemToDelete);
+    }
 });

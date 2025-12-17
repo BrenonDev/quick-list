@@ -116,6 +116,11 @@ main {
                     width: 2rem;
                     height: 2rem;
                     z-index: 1;
+                    transition: ease 150ms scale;
+
+                    &:hover {
+                        scale: 1.2;
+                    }
                 }
 
                 &:hover {
