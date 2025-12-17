@@ -124,7 +124,7 @@ main {
 
                 &:hover {
                     & .checkbox {
-                        border: 1px solid var(--border-hover);
+                        border: 2px solid var(--border-hover);
                     }
                 }
         }
